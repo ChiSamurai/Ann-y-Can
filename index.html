@@ -1,0 +1,75 @@
+ <!DOCTYPE html> 
+ <html style="height:100%">
+    <head>
+        <title>Ann-y-Can - Canvas Annotator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></script>
+<!--        <meta data-template="config:app-meta"></script>-->
+<!--        <link rel="shortcut icon" href="$shared/resources/images/exist_icon_16x16.ico"></script>-->
+        <!--<link rel="stylesheet" type="text/css" href="$shared/resources/css/bootstrap-3.0.3.min.css"></script>-->
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery_patches_addons.js"></script>
+
+        <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/themes/ui-lightness/jquery-ui.css"></script>
+        <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/themes/ui-lightness/theme.css"></script>
+
+        <!--<script type="text/javascript" src="resources/js/jquery.ui.autocomplete.html.js"></script> -->
+        <!--<script type="text/javascript" src="$shared/resources/scripts/bootstrap-3.0.3.min.js"></script>-->
+        <script type="text/javascript" src="bower_components/jquery-svg/jquery.svg.min.js"></script>
+        <script type="text/javascript" src="bower_components/jquery-svg/jquery.svgdom.min.js"></script>
+        <!--<link rel="stylesheet" type="text/css" href="resources/css/jquery.svg.css"></script>-->
+
+        <script type="text/javascript" src="bower_components/jquery-xpath/jquery.xpath.min.js"></script>
+        <script type="text/javascript" src="bower_components/ui-contextmenu/jquery.ui-contextmenu.min.js"></script>
+        <script type="text/javascript" src="bower_components/jquery-dialogextend/build/jquery.dialogextend.js"></script>
+
+        <script type="text/javascript" src="bower_components/jquery.fancytree/dist/jquery.fancytree-all.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/fancytree/ui.fancytree.css"></script>
+<!--        <link rel="stylesheet" type="text/css" href="bower_components/jquery.fancytree/dist/skin-xp/ui.fancytree.css"></script>-->
+        <!--<script type="text/javascript" src="/exist/apps/tamboti/resources/scripts/fancytree/src/jquery.fancytree.edit.js"></script>-->
+        <!--<script type="text/javascript" src="/exist/apps/tamboti/resources/scripts/fancytree/src/jquery.fancytree.dnd.js"></script>-->
+
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/dialogs.js"></script>
+        <script type="text/javascript" src="js/protocols.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/menu-context.js"></script>
+        <script type="text/javascript" src="js/svgfunctions.js"></script>
+        <script type="text/javascript" src="js/elementsList.js"></script>
+        <script type="text/javascript" src="js/svgeditor.js"></script>
+        <script type="text/javascript" src="js/svgeditor-rect.js"></script>
+        <script type="text/javascript" src="js/svgeditor-path.js"></script>
+        <script type="text/javascript" src="js/serializer.js"></script>
+        <script type="text/javascript" src="js/protocolResolver.js"></script>
+
+
+        <script type="text/javascript" src="bower_components/openseadragon/built-openseadragon/openseadragon/openseadragon.min.js"></script>
+<!--        <script type="text/javascript" src="bower_components/OpenSeadragonImagingHelper/demo/scripts/openseadragon-imaginghelper.js"></script> -->
+<!--        <script type="text/javascript" src="bower_components/OpenSeadragonViewerInputHook/build/openseadragon-viewerinputhook.min.js"></script> -->
+        <script type="text/javascript" src="bower_components/svg-overlay/openseadragon-svg-overlay.js"></script>
+
+        <script type="text/javascript" src="js/seadragon.js"></script>
+
+        <script type="text/javascript" src="bower_components/spectrum/spectrum.js"></script>
+        <link rel="stylesheet" type="text/css" href="bower_components/spectrum/spectrum.css"></script>
+
+        <script type="text/javascript" src="js/xmlfunctions.js"></script>
+        <!-- <script type="text/javascript" src="js/tabfunctions.js"></script> -->
+        <script type="text/javascript" src="js/annotations.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css"></script>
+        <link rel="stylesheet" type="text/css" href="css/xmlmarkup.css"></script>
+        <link rel="stylesheet" type="text/css" href="css/tabs.css"></script>
+
+    </head>
+    <body id="body">
+        <div id="menu-container"></div>
+        <div id="menu-context-container"></div>
+        <div id="content" class="container"></div>
+        <div id="display-wrapper">
+            <div id="binary-container"></div>
+            <div id="svg-edit-overlay"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+*~
+.git
+bower_components/
+node_modules/
+exist_module/
+index_noBower.html
+test/
+tests/
+js/protocols.js

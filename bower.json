@@ -1,0 +1,31 @@
+{
+  "name": "ann-y-can",
+  "description": "SVG Canvas Editor and Annotator",
+  "main": "index.html",
+  "authors": [
+    "Matthias Guth"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "openseadragon": "^2.2.1",
+    "jquery": "^3.1.0",
+    "spectrum": "^1.8.0",
+    "jquery-ui": "^1.12.0",
+    "jquery-svg": "^1.5.0",
+    "jquery-xpath": "^0.3.1",
+    "jquery.fancytree": "fancytree#^2.19.0",
+    "jquery-dialogextend": "https://github.com/ROMB/jquery-dialogextend.git#^2.0.4",
+    "svg-overlay": "https://github.com/ChiSamurai/svg-overlay.git#feature/pixel-zooming",
+    "ui-contextmenu": "https://github.com/mar10/jquery-ui-contextmenu.git#^1.13.0"
+  },
+  "devDependencies": {}
+}
