@@ -1,0 +1,158 @@
+<div class="resourceTargets">
+	<div class="resource">
+		<div class="id">textual_database</div>
+		<div class="label">textual database</div>
+		<div class="targets">
+			<div class="target">
+				<div class="id">transcriptions</div>
+				<div class="configId">project_a</div>
+				<div class="label">transcription</div>
+				<div class="description">transcribed text</div>
+				<div class="validDrop">.//(svg:path | svg:rect)</div>
+				<div class="targetBlocks">
+					<div class="targetBlock">
+						<div class="label">Transcription</div>
+						<div class="short">But the humbug...</div>
+						<div class="detail">But the humbug in the copper-plate would have them twice as many</div>
+						<div class="footer">Transcription by John Doe</div>
+						<div class="resourceSelector">#1</div>
+					</div>
+					<div class="targetBlock">
+						<div class="label">Transcription</div>
+						<div class="short">static transcription 2</div>
+						<div class="detail">lorem ipsum dolor sit</div>
+						<div class="footer">Transcription by John Doe</div>
+						<div class="resourceSelector">#2</div>
+					</div>
+					<div class="targetBlock">
+						<div class="label">new Transcription</div>
+						<div class="short">
+							<textarea class="input-text" style="width:100%;height:100%"></textarea>
+						</div>
+						<div class="detail"></div>
+						<div class="footer"></div>
+						<div class="resourceSelector"></div>
+					</div>
+				</div>
+			</div>
+			<div class="target">
+				<div class="id">objects</div>
+				<div class="configId">project_a</div>
+				<div class="label">various objects</div>
+				<div class="description">some objects</div>
+				<div class="validDrop">.//(svg:path | svg:rect)</div>
+				<div class="targetBlocks">
+					<div class="targetBlock">
+						<div class="label">Palo Alto hat</div>
+						<div class="short">
+							<img src="http://rlv.zcache.com/palo_alto_california_trucker_hat-rd6ece373b23540dca9456e4ad6c84c61_v9wqn_8byvr_324.jpg" style="width:100%"/>
+						</div>
+						<div class="detail"></div>
+						<div class="footer"></div>
+						<div class="resourceSelector">object#1</div>
+					</div>
+				</div>
+			</div>
+			<div class="target">
+				<div class="id">descriptions</div>
+				<div class="configId">project_a</div>
+				<div class="label">a description</div>
+				<div class="description">describe a svg rect element</div>
+				<div class="validDrop">.//(svg:rect)</div>
+				<div class="targetBlocks">
+					<div class="targetBlock">
+						<div class="label">static description</div>
+						<div class="short">beautiful</div>
+						<div class="detail"></div>
+						<div class="footer"></div>
+						<div class="resourceSelector">#3</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="resource">
+		<div class="id">persons_companies_database</div>
+		<div class="label">
+			persons and companies
+		</div>
+		<div class="targets">
+			<div class="target">
+				<div class="id">persons</div>
+				<div class="configId">project_a</div>
+				<div class="label">Persons</div>
+				<div class="description">persons from persons and companies database</div>
+				<div class="validDrop">.//(svg:rect | svg:path)</div>
+				<div class="targetBlocks">
+					<div class="targetBlock">
+						<div class="label">Doe, John</div>
+						<div class="short">
+							<span>
+								<img src="http://image.jeuxvideo.com/avatars-sm/d/DDOS_Syn_Flood-1303839281-b.jpg" style="width:60px"/>
+							</span>
+							<span>
+								John Doe
+							</span>
+						</div>
+						<div class="detail">John Doe is some random name. Born somewhen</div>
+						<div class="footer">real Person</div>
+						<div class="resourceSelector">#1</div>
+					</div>
+					<div class="targetBlock">
+						<div class="label">Ganesha</div>
+						<div class="short">
+							<span>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/%27Ganesha%27%2C_sandstone%2C_7th-8th_century%2C_Museum_of_Cham_Sculpture.JPG/179px-%27Ganesha%27%2C_sandstone%2C_7th-8th_century%2C_Museum_of_Cham_Sculpture.JPG" style="width:60px"/>
+							</span>
+							<span>गणेश, Gaṇeśa</span>
+						</div>
+						<div class="detail">
+							<span>
+								Ganesha (/ɡəˈneɪʃə/; Sanskrit: गणेश, Gaṇeśa;), also known as Ganapati and Vinayaka, is one of the best-known and most worshipped deities in the Hindu pantheon. His image is found throughout India, Sri Lanka and Nepal.Hindu sects worship him regardless of affiliations. Devotion to Ganesha is widely diffused and extends to Jains and Buddhists. see: <a href="https://en.wikipedia.org/wiki/Ganesha">https://en.wikipedia.org/wiki/Ganesha</a>
+							</span>
+						</div>
+						<div class="footer">deity</div>
+						<div class="resourceSelector">#2</div>
+					</div>
+					<div class="targetBlock">
+						<div class="label">new person</div>
+						<div class="short">
+							short: <input type="text"></input>
+						</div>
+						<div class="detail">
+							detail : <textarea class="input-text" style="width:100%;height:100%"></textarea>
+						</div>
+						<div class="footer">
+							type: 
+							<select class="type">
+								<option value="real">real Person</option>
+								<option value="deity">deity</option>
+							</select>
+						</div>
+						<div class="resourceSelector">#3</div>
+					</div>
+				</div>
+			</div>
+			<div class="target">
+				<div class="id">companies</div>
+				<div class="configId">project_a</div>
+				<div class="label">Companies</div>
+				<div class="description">companies from persons and companies database</div>
+				<div class="validDrop">.//(svg:rect | svg:path)</div>
+				<div class="targetBlocks">
+					<div class="targetBlock">
+						<div class="label">Coca Cola Company</div>
+						<div class="short">
+							<span>
+								<img src="https://upload.wikimedia.org/wikipedia/de/thumb/c/c1/Enjoy_Coca_Cola_Logo.svg/223px-Enjoy_Coca_Cola_Logo.svg.png" style="width:60px"/>
+							</span>
+						</div>
+						<div class="detail">Coca-Cola (often referred to simply as Coke) is an American carbonated soft drink produced by The Coca-Cola Company in Atlanta, Georgia, United States.</div>
+						<div class="footer">Company</div>
+						<div class="resourceSelector">#1</div>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</div>
+</div>

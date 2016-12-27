@@ -1,0 +1,95 @@
+<!-- Stored Annotations have to be served in the same way as the annotation poon "targets"  -->
+
+<div class="resourceTargets">
+    <div class="resource">
+        <div class="id">textual_database</div>
+        <div class="label"/>
+        <div class="targets">
+            <div class="target">
+                <div class="id">transcriptions</div>
+                <div class="configId">project_a</div>
+                <div class="label">transcription</div>
+                <div class="description">transcribed text</div>
+                <div class="targetBlocks">
+                    <div class="targetBlock" data-annoId="http://localhost/api/transcriptions/anno-1" data-svgId="svg_1" data-targetSelector="//*[@id=1]" data-annoTypeId="transcriptions" data-annoConfigId="project_a">
+                        <div class="resourceSelector">#transcription_id_1</div>
+                        <div class="label">Transkription</div>
+                        <div class="short">
+                            <div style="font-weight:bold">The true big...</div>
+                        </div>
+                        <div class="detail">
+                            <div>
+                                <p>
+The true big had been organized with only two antennae, 
+But the humbug in the copper-plate would have them twice as 
+many. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <span/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="target">
+                <div class="id">transcriptions</div>
+                <div class="configId">project_a</div>
+                <div class="label">transcription</div>
+                <div class="description">transcribed text</div>
+                <div class="targetBlocks">
+                    <div class="targetBlock" data-annoId="http://localhost/api/transcriptions/anno-1" data-svgId="svg_1" data-targetSelector="//*[@id=2]" data-annoTypeId="transcriptions" data-annoConfigId="project_a">
+                        <div class="resourceSelector">#transcription_id_2</div>
+                        <div class="label">Transkription</div>
+                        <div class="short">
+                            <div style="font-weight:bold">2. And I thought ...</div>
+                        </div>
+                        <div class="detail">
+                            <div>
+                                <p>
+2. And I thought, like Dr. Faustus, of the emptiness of art, 
+How we take a fragment for the whole, and call the whole a 
+part, 
+When I heard a heavy footstep that was loud enough for two, 
+And a man of forty entered, exclaiming, "How d' ye do ?" 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <span/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="target">
+                <div class="id">transcriptions</div>
+                <div class="configId">project_a</div>
+                <div class="label">transcription</div>
+                <div class="description">transcribed text</div>
+                <div class="targetBlocks">
+                    <div class="targetBlock" data-annoId="http://localhost/api/transcriptions/anno-1" data-svgId="svg_1" data-targetSelector="//*[@id=3]" data-annoTypeId="transcriptions" data-annoConfigId="project_a">
+                        <div class="resourceSelector">#transcription_id_3</div>
+                        <div class="label">Transkription</div>
+                        <div class="short">
+                            <div style="font-weight:bold">3. He was not a ghost</div>
+                        </div>
+                        <div class="detail">
+                            <div>
+                                <p>
+3. He was not a ghost, my visitor, but solid flesh and bone ; 
+He wore a Palo Alto hat ; his weight was twenty stone; 
+( It's odd how hats expand their brims as riper years invade, 
+As if, when life had reached its noon, it wanted them for 
+shade ! )
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <span/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

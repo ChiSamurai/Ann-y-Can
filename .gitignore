@@ -1,5 +1,7 @@
 *~
+DEADJOE
 .git
+backup/
 bower_components/
 node_modules/
 exist_module/

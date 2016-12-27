@@ -170,35 +170,33 @@ var Annotations = {
     return df.promise();
     },
     
-    loadTargets: function (resourceID, minimized) {
-    // ToDo: Load targets from multiple resources at once
+    loadTargets: function(resourceIDs, minimized) {
         var _self = this;
-        options.protocols.getTargets.services[this.options.getTargetsService].get(resourceID).then(function(data) {
-/*            console.debug("AJAX RESULT");
-            console.debug($(data));
-*/
+        options.protocols.getTargets.services[this.options.getTargetsService].get(resourceIDs).then(function(data) {
             var $targetData = $(data);
-
             var text = "";
-            if($targetData.children("div.resource").length > 0) {
-                var resourceID = $targetData.children("div.resourceId").html();
-                var resourceLabel = $targetData.children("div.label").html(); 
-                data = $targetData.children("div.resource").first(); //ToDo: Load targets from multiple resources (temporary workaround)
+            $targetData.children("div.resource").each(function(idx, resourceTargetData) {
+                var $resourceTargetData = $(resourceTargetData);
+                var resourceTargetId = $resourceTargetData.children("div.id").html();
 
-                
+                var resourceLabel = $resourceTargetData.children("div.label").html(); 
                 var targetContainer = $(Annotations.options.selectors["target-div"]);
                 var configId = $(Annotations.options.selectors["config-dropdown"]).find("option:selected").val();
 
                 //"Reload" if resource is already loaded (means: delete the old container first)
-                var $existingContainer = $(_self.options.selectors["target-div"]).children("div.resourceTargetContainer[data-resourceid='" + resourceID + "']");
+                var $existingContainer = $(_self.options.selectors["target-div"]).children("div.resourceTargetContainer[data-resourceid='" + resourceTargetId + "']");
                 if ($existingContainer.length !== 0){
                     $existingContainer.remove();
                 }
                 
                 // Add RESOURCE CONTAINER
-                var resourceTargetContainer = $('<div class="resourceTargetContainer" data-resourceId="' + resourceID + '" data-serviceId="' + _self.options.getTargetsService + '" data-configId="' + configId + '" />');
+                var resourceTargetContainer = $('<div class="resourceTargetContainer"/>')
+                    .attr("data-resourceId", resourceTargetId)
+                    .attr("data-serviceId", _self.options.getTargetsService)
+                    .attr("data-configId", configId);
                 targetContainer.prepend(resourceTargetContainer);
-                var targetContainerLabel = $('<div class="resourceTargetHeader"/>').html(resourceLabel);
+                var targetContainerLabel = $('<div class="resourceTargetHeader"/>')
+                    .html(resourceLabel);
                 var toggleButton = $('<span class="ui-icon ui-icon-carat-2-n-s button-inline" />');
                 targetContainerLabel.append(toggleButton);
                 // register toggle button handler
@@ -214,7 +212,7 @@ var Annotations = {
                 resourceTargetContainer.append(resourceTargets);
                 
                 // Add container for TARGET (ANNO) TYPES
-                $(data).find("div.targets > div.target:has(div.targetBlocks > div.targetBlock)").each(function() {
+                $resourceTargetData.find("div.targets > div.target:has(div.targetBlocks > div.targetBlock)").each(function() {
                     var annoTypeId = $(this).children("div.id").html();
                     var targetTypeLabel = $(this).children("div.label").html();
                     // Create a container for each Target Type
@@ -239,15 +237,12 @@ var Annotations = {
                 });
                 // Drop a message, if resource was reloaded
                 if ($existingContainer.length !== 0){
-                    text = "resource " + resourceID + " reloaded";
+                    text = "resource " +resourceTargetId + " reloaded";
                     $('#annotation-targets').append(message(text, "notice", 3000));
                 }
-            }else{
-                text = "no annotations found for resource";
-                $('#annotation-targets').append(message(text, "fail", 3000));
-            }
-            log(text);
+            });
             // log("loading targets for context <i>'" + annotation.label + "'</i> result: " + textStatus);
+            log(text);
         });
     },
 
@@ -486,6 +481,7 @@ var Annotations = {
         Annotations.setUpdated(container);
     },
     getAnnotations: function(svgUUID) {
+        console.debug("getAnnotations");
         if(svgUUID){
             var _self = this;
             options.protocols.getAnnotations.services[this.options.annoGetService].get(svgUUID).then(function(data) {
@@ -589,6 +585,7 @@ var Annotations = {
         });
 
         if(typeof(options.protocols.getTargets.services[_self.options.getTargetsService].getCallbacks) === "function"){
+            /*
             var annoConfigId = annotationHTML.attr("data-configid");
             var annoTypeId = annotationHTML.attr("data-annotypeid");
             options.protocols.getTargets.services[_self.options.getTargetsService].getCallbacks(annoConfigId, annoTypeId).done(function(data){
@@ -598,7 +595,7 @@ var Annotations = {
                 if(typeof(_self.Callbacks.add) === "function"){
                     _self.Callbacks.add(nodes);
                 }
-            });
+            });*/
         }
         return annotationHTML;
     },

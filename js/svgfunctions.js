@@ -82,8 +82,9 @@ var SVGFunctions = {
         // if SVGEditor has drawn a new rect, add it to the list
         $(document).on("SVGEditor.Rect.new", function (data) {
             //var targetElementId = _self.selectedElementId;
+            console.debug("new Rect catched");
+            console.debug(data.event.point);
             _self._addRectangle(data.event.point.x, data.event.point.y, 1, 1, data.fillColor);
-            console.debug(data.event);
         });
         
         $(document).on("SVGEditor.Path.new", function (event) {
@@ -323,9 +324,9 @@ var SVGFunctions = {
                     var iiifRegion = SVGFunctions.svgBBoxToImagePixels(boundingRect);
                     // console.debug(iiifRegion);
                     var tileSource = SeadragonViewer.instance.viewport.viewer.source;
-                    var qualityString = "default";
+                    var qualityString = SeadragonViewer.instance.viewport.viewer.source.qualities[0];
                     // IF IIIF service supports conversion into grey, convert
-                    if (tileSource.profile[1].qualities.indexOf("gray") !== -1){
+                    if (tileSource.qualities.indexOf("gray") !== -1){
                         qualityString = "gray";
                     }
                     var iiifURI = tileSource['@id'] + "/" +
@@ -340,7 +341,7 @@ var SVGFunctions = {
                     ocrService.send(iiifURI).then(function(data) {
                         var resultTextarea = $('<textarea style="width:100%;height:100%;">' + data + '</textarea>');
                         $("#dialog-result").find(".text_short").html("OCR result:");
-                        $("#dialog-result").find(".text_details").html(resultTextarea);
+                        $("#dialog-result").find(".text_detail").html(resultTextarea);
                         $("#dialog-result").dialog("open");
                         log("OCR Server returned an answer", "success");
                     });
@@ -410,7 +411,6 @@ var SVGFunctions = {
     },
     
     getElementNodesById: function(elementId) {
-        
         // remove element from SVG and from list
         // var listElement = $("#" + this.svgListContainerId).find("div[elementid='" + elementId + "']");
         var SVGElement = $(this.svgContainer.getElementById(elementId));
@@ -483,7 +483,8 @@ var SVGFunctions = {
 
     _addPath: function(x, y, fillColor){
         var targetElementId = ElementsList.fancytree.getActiveNode().key;
-        var svgObj = $(svgNode).svg('get');
+        var svgObj = this.svgContainer;
+                
         var targetNode = svgObj.getElementById(targetElementId);
         var uuid = this._newId();
         
@@ -503,10 +504,8 @@ var SVGFunctions = {
 
     },
     _addRectangle: function(x, y, w, h, fillColor){
-        var svgObj = $(svgNode).svg('get');
+        var svgObj = this.svgContainer;
         var targetNode = svgObj.getElementById(ElementsList.fancytree.getActiveNode().key);
-        // console.debug(targetElementId);
-        // console.debug(targetNode);
 
         var rect = svgObj.rect(targetNode, x, y, 1, 1,  {
                                             fill: fillColor, 

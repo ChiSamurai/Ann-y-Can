@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+    <body>
+        <div>
+            <span class="menuitem-menu1 menuitem">
+                <span class="label">File</span>
+                <ul class="menu" id="menu-file" style="display:none">
+                    <li>
+                        <div>
+                            <span id="menu-file-open">Open ...</span>
+                        </div>
+                        <ul>
+                            <li id="menu-file-open-image">
+                                <div>Image</div>
+                            </li>
+                            <li id="menu-file-open-canvas">
+                                <div>Canvas for actual image</div>
+                            </li>
+                        </ul>
+                    </li><!--                <li><hr/></li>-->
+                    <li id="menu-file-new-canvas">
+                        <div>New Canvas</div>
+                    </li>
+                    <li id="menu-file-save">
+                        <div>Save</div>
+                    </li><!--
+                    <li>
+                        Save SVG as ...
+                    </li>
+                --><!--
+                    <li>
+                        Open Template...
+                    </li>
+                --><!--
+                    <li>Binary (Tiled Source)
+                        <ul>
+                            <li id="menu-file-openTiledSource">open IIIF-IRI</li>
+                        </ul>
+                    </li>
+                    <li>SVG Overlay
+                        <ul>
+                            <li id="menu-file-openSVGTamboti">open SVG</li>
+                        </ul>
+                    </li>
+                -->
+                </ul>
+            </span>
+            <span class="menuitem-display menuitem">
+                <span class="label">Display</span>
+                <ul class="menu" id="menu-display" style="display:none">
+                    <li id="menu-display-svgElements" data-dialog="svg-elements">
+                        <div>
+                            <input type="checkbox" class="displayStatus" data-dialog="svg-elements" disabled="disabled"/>show Elements
+                        </div>
+                    </li>
+                    <li id="menu-display-annotations-pool" data-dialog="annotations-pool">
+                        <div>
+                            <input type="checkbox" class="displayStatus" data-dialog="annotations-pool" disabled="disabled"/>show annotations pool
+                        </div>
+                    </li>
+                    <li id="menu-display-annotations-display" data-dialog="annotations-display">
+                        <div>
+                            <input type="checkbox" class="displayStatus" data-dialog="annotations-display" disabled="disabled"/>show existing annotations
+                        </div>
+                    </li>
+                    <li id="menu-display-log-console" data-dialog="log-console">
+                        <div>
+                            <input type="checkbox" class="displayStatus" data-dialog="log-console" disabled="disabled"/>show Log
+                        </div>
+                    </li>
+                    <li>
+                        <hr/>
+                    </li>
+                    <li id="menu-display-iiifInfo" data-dialog="dialog-showIIIFInfo">
+                        <div>Show IIIF info</div>
+                    </li>
+                </ul>
+            </span>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+    <body>
+        <div id="dialog-showIIIFInfo" title="IIIF Source Info" style="display:none"/><!-- 
+        ******************* Menu Dialogs ******************* 
+        --><!-- File Menu -->
+        <div id="dialog-new-canvas" title="Create new canvas" style="display:none">
+            <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"/>
+            <p>
+                Creating a new canvas will discard any unsaved changes on the actual canvas. Are you sure to continue?
+            </p>
+        </div>
+        <div id="dialog-open-image" title="Open Image" style="display:none">
+            <div>Open:
+                <select name="source-name"/>
+            </div>
+            <textarea name="source-input" placeholder="placeholder" style="width:100%"/>
+            <div class="source-input-hint">Here the protocol's input hint will appear</div>
+        </div>
+        <div id="dialog-open-canvas" title="Open canvas" style="display:none">
+            <div>Tamboti link or UUID (tamboti:uuid)</div>
+            <input type="text" name="IRI" placeholder="tamboti:uuid-testimage"/>
+        </div><!--
+        ******************* Main Dialogs ******************* 
+        -->
+        <div id="log-console" class="main-dialogs"/>
+        <div id="annotations-display" class="main-dialogs" style="display:none"/>
+        <div id="svg-elements" class="main-dialogs" style="display:none">
+            <div id="svg-edit-buttons">
+                <span class="button" name="selectButton" data-action="select">sel</span>
+                <span class="button button-disabled" name="newGroupButton" data-action="newGroup">g</span>
+                <span class="button button-disabled" name="newRectButton" data-action="newRect">rect</span>
+                <span class="button button-disabled" name="newPathButton" data-action="newPath">path</span>
+                <span id="colorpicker-container">
+                    <input id="colorpicker"/>
+                </span>
+            </div>
+            <div id="svg-elements-fancytree">
+                <div id="svg-elements-list-ft"/>
+            </div>
+        </div>
+        <div id="annotations-pool" class="main-dialogs" style="display:none">
+            <div id="annotation-config-container" class="ui-widget ui-widget-content ui-corner-all ui-tabs">
+                <div>Annotation configuration:
+                    <select id="annotation-config"/>
+                </div><!--                <div>--><!--                    Annotation type: --><!--                    <select id="annotation-select"/>--><!--                </div>-->
+            </div>
+            <div id="annotation-load-resource-container" class="ui-widget ui-widget-content ui-corner-all ui-tabs">
+                <div>
+                    <span style="float:left">Load target-resource</span>
+                    <span id="annotation-target-tooltip" class="ui-icon ui-icon-info" title=""/>
+                </div>
+                <input id="annotation-target-resource" type="text" style="width:100%"/>
+                <div>
+                    <button id="annotation-target-open" type="button">load</button>
+                </div>
+                <div id="resource-search">
+                    <div>Search for resource <span class="hits-display"/>
+                    </div>
+                    <div>
+                        <input type="text" name="searchString"/>
+                    </div>
+                </div>
+            </div>
+            <div id="annotation-targets"/>
+        <!-- ******************** --><!-- Context Menu Dialogs --><!-- ******************** -->
+        <div id="dialog-newGroup" title="create new group node" style="display:none">
+            <label for="name">Label</label>
+            <input type="text" name="title" class="text ui-widget-content ui-corner-all"/><!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px"/>
+        </div>
+        <div id="dialog-renameElement" title="rename node" style="display:none">
+            <label for="dialog-elementName">Label</label>
+            <input type="text" id="dialog-elementName" name="title" class="text ui-widget-content ui-corner-all"/><!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px"/>
+        </div><!--
+            ******************* Result Dialogs ******************* 
+        -->
+        <div id="dialog-result" style="display:none">
+            <p>
+                <span class="ui-icon" style="float:left; margin:0 7px 50px 0;"/>
+                <span class="text_short"/>
+            </p>
+            <p>
+                <span class="text_detail"/>
+            </p>
+        </div>
+        <!-- site leaving dialog -->
+        <div id="dialog-leave-site" style="display:none" title="Save the progress">
+            <p>
+            <span class="ui-icon ui-icon-alert" style="float:left"/>Do you want to save your progress and close the editor window?
+            </p>
+        </div>
+    </body>
+</html>

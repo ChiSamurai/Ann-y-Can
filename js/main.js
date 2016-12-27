@@ -11,10 +11,6 @@ var IDs = {
     annotationsResources: null
 };
 
-// Protocol definition located in ./protocols.js
-var options = {
-};
-
 var svgNode;
 
 var initOptions = {
@@ -26,7 +22,7 @@ var initOptions = {
     },
     seadragon : {
         id: "binary-container",
-        prefixUrl: "bower_components/openseadragon/built-openseadragon/openseadragon/images/",
+        prefixUrl: "css/images/",
         visibilityRatio: 0.2,
         minZoomImageRatio: 0.4,
         maxZoomPixelRatio: Infinity,
@@ -131,7 +127,6 @@ $(function(){
                 $.when(SVGFunctions.init($(SeadragonViewer.overlay.node()).svg("get"))).then(
                     console.debug("SVGFunctions module initialized")
                 ).then(
-
                     // open IIIF image according to the submitted method (defined in protocols.js)
                     SeadragonViewer.loadBinary(iiifInfoUrl)
                 ).then(
@@ -149,6 +144,10 @@ $(function(){
                             Annotations.loadTargets(resourceId, false);
                         });
                     }
+                    //Initialization complete... drop event
+                    $.event.trigger({
+                        type: "Annycan.initComplete"
+                    });
                 });
             });
 

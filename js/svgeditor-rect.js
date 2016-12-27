@@ -114,6 +114,7 @@ SVGEditor.Rect = {
         $("#binary-container").css("cursor", "crosshair");
         $(document).on("Seadragon.mouseClick", function(event) {
             // console.debug("new rectangle triggered");
+            console.debug(event);
             $.event.trigger({
                 type: "SVGEditor.Rect.new",
                 event: event,

@@ -1,10 +1,10 @@
-#tabs.ui-widget{ 
-    font-size: 8px;
+#tabs.ui-widget {
+  font-size: 8px;
 }
-#tabs.ui-widget .ui-tabs-anchor{
-    white-space:normal;
+#tabs.ui-widget .ui-tabs-anchor {
+  white-space: normal;
 }
-.ui-tab-close-button{
-    float: right;
-    cursor: pointer;
+.ui-tab-close-button {
+  float: right;
+  cursor: pointer;
 }

@@ -1,0 +1,87 @@
+<div class="resourceTargets">
+    <div class="resource">
+        <div class="id">w_48572af2-b0c9-4194-9d86-30a6f1f31beb</div>
+        <div class="label">
+            Tamboti Resource w_48572af2-b0c9-4194-9d86-30a6f1f31beb
+        </div>
+        <div class="targets">
+            <div class="target">
+                <div class="id">anno-type-1</div>
+                <div class="configId">anno-config-1</div>
+                <div class="label">Transcription</div>
+                <div class="description">transcribed text</div>
+                <div class="validDrop">.//(svg:svg | svg:path | svg:rect | svg:polyline | svg:g)</div>
+                <div class="targetBlocks">
+                    <div class="targetBlock">
+                        <div class="label">Transcription</div>
+                        <div class="short">Heidelberg
+Neuenheim-Kastellwe</div>
+                        <div class="detail">Heidelberg
+Neuenheim-Kastellweg
+
+röm. Kastell
+20.2.1975</div>
+                        <div class="footer">Transcription by Dirk Eller</div>
+                        <div class="resourceSelector">/inscriptionSet/inscription[1]</div>
+                    </div>
+                    <div class="targetBlock">
+                        <div class="label">Transcription</div>
+                        <div class="short">G. Bender fährt um 7.30 Uhr in</div>
+                        <div class="detail">G. Bender fährt um 7.30 Uhr in das Museum, um
+Zaunpflöcke und Stacheldraht zu holen.
+Ab 8.15 Uhr werden die Pflöcke an der hinteren
+Grundstücksgrenze eingegraben. Um 9.45 Uhr
+kommt Herr Schmidt vom Bauaufsichtsamt und
+erkundigt sich, ob G. Bender und W. Schweinfurth
+vom Landesdenkmalamt sind. Es verläßt danach
+sofort ohne weitere Fragen das Grabungsgelände.
+Gegen 11.30 Uhr werden von der Firma Streib
+30 Diele abgeladen.
+
+Der Ofen im Bauwagen brennt nicht richtig, sodaß
+der Raupenführer des öfteren Dieselöl nachfüllen
+muß.
+
+G. Bender und W. Schweinfurth fahren um 16.00
+Uhr in das Museum.</div>
+                        <div class="footer">Transcription by Dirk Eller</div>
+                        <div class="resourceSelector">/inscriptionSet/inscription[2]</div>
+                    </div>
+                    <div class="targetBlock">
+                        <div class="label">Transcription</div>
+                        <div class="short">G. Bender                7.30-</div>
+                        <div class="detail">G. Bender                7.30-17.30        12.00-12.30
+W. Schweinfurth     8.00-17.30        12.00-12.30</div>
+                        <div class="footer">Transcription by Dirk Eller</div>
+                        <div class="resourceSelector">/inscriptionSet/inscription[3]</div>
+                    </div>
+                    <div class="targetBlock">
+                        <div class="label">Transcription</div>
+                        <div class="short">H.</div>
+                        <div class="detail">H.</div>
+                        <div class="footer">Transcription by Dirk Eller</div>
+                        <div class="resourceSelector">/inscriptionSet/inscription[4]</div>
+                    </div>
+                </div>
+            </div>
+            <div class="target">
+                <div class="id">anno-type-2</div>
+                <div class="configId">anno-config-1</div>
+                <div class="label">Einhängepunkt</div>
+                <div class="description">3D-Punkt</div>
+                <div class="validDrop">.//(svg:rect)</div>
+                <div class="targetBlocks">
+                    <div class="targetBlock">
+                        <div class="label">new Inscription</div>
+                        <div class="short">
+                            <textarea style="width:100%;height:100%"></textarea>
+                        </div>
+                        <div class="detail"></div>
+                        <div class="footer"></div>
+                        <div class="resourceSelector">/vra/work/inscriptionSet/inscription</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

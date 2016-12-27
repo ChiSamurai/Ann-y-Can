@@ -1,18 +1,18 @@
-.node, .node-close{
-    color:red;
+.node,
+.node-close {
+  color: red;
 }
 /*.node{*/
 /*    position:relative;*/
 /*    float:left;*/
 /*}*/
-
-.openclose{
-    position:relative;
-    float:left;
+.openclose {
+  position: relative;
+  float: left;
 }
 .attribute-name {
-    color: black;
-} 
-.attribute-value{
-    color: blue;
-} 
+  color: black;
+}
+.attribute-value {
+  color: blue;
+}
